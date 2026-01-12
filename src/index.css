@@ -1,7 +1,7 @@
 :root {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -49,7 +49,8 @@ body {
   border: 1px solid #eeeeee;
   border-right: none;
   background-color: #ffffff;
-  box-shadow: 0px 0px 4px rgba(20, 20, 20, 0.1), 0px 8px 15px rgba(20, 20, 20, 0.12);
+  box-shadow: 0px 0px 4px rgba(20, 20, 20, 0.1),
+    0px 8px 15px rgba(20, 20, 20, 0.12);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -84,7 +85,7 @@ body {
 }
 
 .checkbox-label {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -192,8 +193,9 @@ body {
 .separator {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  padding: 10px 15px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
   gap: 10px;
   width: 100%;
   height: 20px;
@@ -204,7 +206,7 @@ body {
 
 .separator::before {
   content: "";
-  width: 340px;
+  width: 326px;
   height: 0px;
   border: 0.7px solid #cdcdcd;
   flex: none;
@@ -212,12 +214,23 @@ body {
   flex-grow: 0;
 }
 
+/* Mobile: Separator responsive */
+@media (max-width: 768px) {
+  .separator {
+    padding: 10px 10px;
+  }
+
+  .separator::before {
+    width: calc(100% - 20px);
+  }
+}
+
 /* Button Wrapper */
 .button-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 10px 15px;
+  align-items: center;
+  padding: 10px 22px;
   gap: 10px;
   width: 100%;
   height: 60px;
@@ -233,12 +246,12 @@ body {
   align-items: center;
   padding: 10px 20px;
   gap: 10px;
-  width: 340px;
+  width: 326px;
   height: 40px;
   background-color: #ffce22;
   border-radius: 4px;
   border: none;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -246,9 +259,20 @@ body {
   color: #1f2128;
   cursor: pointer;
   transition: background-color 0ms;
-  margin: 0;
+  margin: 0 auto;
   box-sizing: border-box;
   mix-blend-mode: normal;
+}
+
+/* Mobile: Button responsive */
+@media (max-width: 768px) {
+  .button-wrapper {
+    padding: 10px 10px;
+  }
+
+  .done-button {
+    width: calc(100% - 20px);
+  }
 }
 
 /* State 1: Default */
